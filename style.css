@@ -1,0 +1,438 @@
+/* Info */
+    /* Colors */
+    /* orange:  #e8941a */
+    /* pink:  #f78b98 */
+    /* fuschia:  #dc4182 */
+    /* blue:  #6757b7 */
+    /* green:  #7fbaa6 */
+    /* whiteish:  #eaebee */
+    /* cream: #e7e6d4 */
+    /* brown-gray: #cabdb1 */
+    /* charcoal: #3f4439 */
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+main, body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    Font-Family: 'Monda', Sans-Serif;
+    Font-Size: 16px;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #cabdb1;
+}
+
+h1 {
+    Font-Family: 'Julius Sans One', Sans-Serif;
+    Font-Size: 3em;
+    line-height: 1em;
+}
+
+h2 {
+    Font-Family: 'Julius Sans One', Sans-Serif;
+    Font-Size: 3em;
+}
+
+h3 {
+    Font-Family: 'Julius Sans One', Sans-Serif;
+    Font-Size: 2em;
+    line-height: 1em;
+}
+
+
+/* Body Images */
+.reveal-image, .foreground-image, .big-logo {
+    position: relative;
+    opacity: 0.70;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* creates parallax scroll */
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.hero {
+    background-image: url('./img/elim-cam-beach-fire.jpg');
+    min-height: 100%;
+}
+
+.big-logo {
+    opacity: 1;
+    width: 10%;
+}
+
+#big-logo-bottom {
+    margin: 0;
+}
+
+.foreground-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('./img/cjg-bacalar-no_logo-front-image-1920x1080.webp');
+    z-index: 10;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 1;
+}
+
+/* .reveal-image-1, .reveal-image-2, .reveal-image-3 {
+    min-height: 400px;
+} */
+
+/* reveal images for each section */
+#story {
+    background-image: url('./img/nathan-dumlao-5BB_atDT4oA-unsplash.jpg');
+}
+
+#location {
+    background-image: url('./img/darren-lawrence-K4BsLPTjKJA-unsplash.jpg');
+}
+
+#transportation {
+    background-image: url('./img/eduardo-loaiza-y1UR7AcBe5o-unsplash.jpg');
+}
+
+#lodging {
+    background-image: url('./img/chuttersnap-aEnH4hJ_Mrs-unsplash.jpg');
+}
+
+#schedule {
+    background-image: url('./img/nathan-dumlao-5BB_atDT4oA-unsplash.jpg');
+}
+
+#recommendations {
+    background-image: url('./img/nick-karvounis-UA3zSV9ze8U-unsplash.jpg');
+}
+
+#contact {
+    background-image: url('./img/darren-lawrence-K4BsLPTjKJA-unsplash.jpg');
+}
+
+/* Sections */
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section p {
+    width: 75%;
+    margin: auto;
+    max-width: 900px;
+}
+
+.section-light {
+    background-color: #7fbaa6;
+    color: #3f4439;
+}
+
+.section-dark {
+    background-color: #3f4439;
+    color: #e7e6d4;
+}
+
+.reveal-text {
+    width: 40%;
+    max-width: 700px;
+    text-align: center;
+    color: #3f4439;
+    font-size: 27px;
+    letter-spacing: 7px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+
+.reveal-text .border {
+    margin: auto;
+    background-color: #e8941a;
+    color: #eaebee;
+    padding: 20px;
+
+}
+
+.hero-text {
+    max-width: 900px;
+    line-height: 3em;
+    letter-spacing: 2px;
+}
+
+.reveal-text .border.trans {
+    /* background-color: transparent; */
+    opacity: 0.9;
+}
+
+.attribution {
+    font-size: .5em;
+    font-style:italic;
+    line-height: 1em;
+}
+
+/* Nav Header */
+.nav-header {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    padding: .25em 1em;
+    background-color: #dc4182;
+    width: 100%;
+    z-index:100;
+}
+
+.header-logo h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 1em;
+    text-align: center;
+    color: #eaebee;
+}
+
+nav {
+    width: 80%;
+}
+
+.nav-links, .social-links {
+    display:flex;
+    align-items: space-around;
+    justify-content: space-around;
+    width: 5fr;
+    padding: 1.5em;
+    gap: .75em;
+    overflow-x: hidden;
+}
+
+.nav-links a, .social-links a {
+    text-decoration: none;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: #eaebee;
+    cursor: pointer;
+    user-select: none
+}
+
+.nav-links a:hover, .social-links a:hover {
+    text-shadow: 2px 2px 3px #eaebee;
+}
+
+.social-links {
+    align-items: space-around;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.social-links a {
+    color: #f78b98;
+}
+
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 20px;
+    height: 3px;
+    margin: 5px;
+    background-color: #e7e6d4;
+    transition: all 0.3s ease;
+}
+
+.contact-form {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 20px #00000010;
+    background-color: #eaebee;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #3f4439;
+  }
+  .form-group {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid rgba(128, 128, 128, 0.199);
+    margin-top: 5px;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+  }
+  .contact-form button[type="submit"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 8px;
+    color: #e7e6d4;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color:#3f4439;
+    transition: 0.3s ease background-color;
+  }
+  .contact-form button[type="submit"]:hover {
+    background-color: #f78b98;
+  }
+  #status {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+  #status.success {
+    background-color: rgb(211, 250, 153);
+    animation: status 4s ease forwards;
+  }
+  #status.error {
+    background-color: rgb(250, 129, 92);
+    color: white;
+    animation: status 4s ease forwards;
+  }
+  @keyframes status {
+    0% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    90% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  
+
+
+@media(max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .form-group {
+        font-size: 16px;
+      }
+      .form-group input,
+      .form-group textarea {
+        font-size: 16px;
+      }
+      
+      .contact-form button[type="submit"] {
+        font-size: 20px;
+      }
+
+    .hero {
+        height: 400px;
+    }
+
+    .reveal-image {
+        background-attachment: scroll;
+    }
+
+    .reveal-text {
+        width: 66%;
+        font-size: 20px;
+        letter-spacing: 7px;
+        line-height: 1.5em;
+    }
+
+    .section {
+        padding: 2em 2em;
+    }
+    .section p {
+        width: 85%;
+    }
+
+    .foreground-image {
+        visibility: hidden;
+    }
+
+    .hero {
+        background-image: url('./img/elim-cam-beach-fire.jpg');
+        min-height: 55%;
+    }
+
+    .big-logo {
+        visibility: hidden;
+    }
+
+    .header-logo {
+        font-size: .75em;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav {
+        position:absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #e8941a;
+        opacity: 1;
+        z-index: 11;
+        max-width: 55%;
+        transform: translateX(100%);
+        
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+}
+
+.nav-active {
+    transform: translateX(0%);
+    transition: transform 0.3s ease-in;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
