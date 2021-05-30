@@ -20,8 +20,37 @@ const navSlide = () => {
     })
 }
 
+  
+
+const langSwitch = () => {
+    const langButton = document.querySelector('.tgl-btn');
+    const textES = document.querySelectorAll('.es');
+    const textEN = document.querySelectorAll('.en');
+    const userLang = navigator.language || navigator.userLanguage || navigator.browserLanguage;
+    const spanishLangOptions = ["es", "es-AR", "es-GT", "es-CR", "es-PA", "es-DO", "es-MX", "es-VE", "es-CO", 
+    "es-PE", "es-EC", "es-CL", "es-UY", "es-PY", "es-BO", "es-SV", "es-HN", "es-NI", 
+    "es-PR"];
+
+    if (spanishLangOptions.includes(userLang)) {
+        textEN.forEach(x => x.classList.toggle('hidden'));
+    } else {
+        textES.forEach(x => x.classList.toggle('hidden'));
+    }
+
+    langButton.addEventListener('click',() => {
+        //behavior for clicking language switch button
+        // console.log(textES)
+        textES.forEach(x => x.classList.toggle('hidden'));
+        textEN.forEach(x => x.classList.toggle('hidden'));
+    })
+
+    
+}
+
+
 const app = () => {
     navSlide();
+    langSwitch();
 }
 
 app();
