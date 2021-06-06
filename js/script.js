@@ -1,3 +1,5 @@
+import {formToSheets} from './formManager.js';
+
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('#main-nav');
@@ -20,7 +22,6 @@ const navSlide = () => {
     })
 }
 
-  
 
 const langSwitch = () => {
     const langButton = document.querySelector('.tgl-btn');
@@ -38,8 +39,6 @@ const langSwitch = () => {
     }
 
     langButton.addEventListener('click',() => {
-        //behavior for clicking language switch button
-        // console.log(textES)
         textES.forEach(x => x.classList.toggle('hidden'));
         textEN.forEach(x => x.classList.toggle('hidden'));
     })
@@ -47,10 +46,43 @@ const langSwitch = () => {
     
 }
 
+const hideExtraGuestsFromForm = () => {
+    const guestPicker = document.getElementById('numGuests');
+    const guestOne = document.getElementById('guestOne');
+    const guestTwo = document.getElementById('guestTwo');
+    const guestThree = document.getElementById('guestThree');
+    const guestFour = document.getElementById('guestFour');
+
+    guestPicker.addEventListener('change',() => {
+        const numGuests = guestPicker.options[guestPicker.selectedIndex].value;
+        switch (numGuests) {
+            case '1': 
+                guestOne.classList.remove('hidden');
+                [guestTwo,guestThree,guestFour].forEach(x => x.classList.add('hidden'));
+                break;
+            case '2':
+                [guestOne,guestTwo].forEach(x => x.classList.remove('hidden'));
+                [guestThree,guestFour].forEach(x => x.classList.add('hidden'));
+                break;
+            case '3':
+                [guestOne,guestTwo,guestThree].forEach(x => x.classList.remove('hidden'));
+                guestFour.classList.add('hidden');
+                break;
+            case '4':
+                [guestOne,guestTwo,guestThree,guestFour].forEach(x => x.classList.remove('hidden'));
+                break;
+            default:
+                console.log('switch case error');
+        }
+    })
+}
+
 
 const app = () => {
     navSlide();
     langSwitch();
+    formToSheets();
+    hideExtraGuestsFromForm();
 }
 
 app();
