@@ -451,7 +451,29 @@ h4 {
     }
   }
   
-/* The Modal (background) */
+.contact-form i {
+  color: #6757b7;
+  margin-right: 10px;
+}
+
+/* Modal */
+.modalBtn {
+  width: 90%;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  background-color:#7fbaa6;
+  transition: 0.3s ease background-color;
+}
+
+.modalBtn:hover {
+  background-color:#f78b98;
+  transition: 0.3s ease background-color;
+}
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -471,7 +493,7 @@ h4 {
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 50%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */

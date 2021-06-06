@@ -3,15 +3,17 @@ export const modal = () => {
     const modal = document.getElementById("myModal");
 
     // Get the button that opens the modal
-    const modalBtn = document.getElementById("myBtn");
+    const modalBtns = document.querySelectorAll(".modalBtn");
 
     // Get the <span> element that closes the modal
     const span = document.getElementsByClassName("close")[0];
 
     // When the user clicks on the button, open the modal
-    modalBtn.onclick = function() {
-        modal.style.display = "block";
-    }
+    modalBtns.forEach(e => {
+        e.addEventListener('click',() => {
+            modal.style.display = "block";
+        })
+    })
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
