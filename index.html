@@ -204,7 +204,9 @@
             <div class="contact-form">
                 <form name="submit-to-google-sheet">
                 <div class="form-group">
-                    <label>How many guests (including you)?
+                    <label>
+                        <span class="en">How many guests (including you)?</span>
+                        <span class="es">Cuantos invitados (incluyéndote)?</span>
                         <select class="dropdown" name="numGuests" id="numGuests">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -215,27 +217,66 @@
                 </div>
 
                 <div class="form-group" id="guestOne">
-                    <p>Guest 1</p>
+                    <p class='en'>Guest 1</p>
+                    <p class='es'>Invitado 1</p>
                     <div class="form-group-two-col">
-                        <label for="firstName"> First Name</label>
+                        <label for="firstName"> <span class="en">First Name</span><span class="es">Nombre</span></label>
                         <input type="text" id="1_first" name="1_first">
-                        <label for="latsName">Last Name</label>
+                        <label for="latsName"><span class="en">Last Name</span><span class="es">Apellido</span></label>
                         <input type="text" id="1_last" name="1_last">
-                        <label>Meal Preference</label>
-                        <select class="dropdown" name="1_meal" id="1_meal">
+                        <label><span class="en">Meal Preference</span><span class="es">Preferencia de Comida</span></label>
+                        <select class="dropdown en" name="1_meal">
                             <option value="meat">Carnivore (pork, chicken, & fish)</option>
                             <option value="veg">Vegetarian</option>
                         </select>
-                        <label>Hair & Makeup ($60)</label>
-                        <select class="dropdown" name="1_hair" id="1_hair">
+                        <select class="dropdown es" name="1_meal">
+                            <option value="meat">Carnívora (cerdo, pollo y pescado)</option>
+                            <option value="veg">Vegetariana</option>
+                        </select>
+                        <label><span class="en">Hair & Makeup </span><span class="es">Peinado y Maquillaje</span></label>
+                        <select class="dropdown en" name="1_hair">
                             <option value="no">No</option>
                             <option value="yes">Yes</option>
+                        </select>
+                        <select class="dropdown es" name="1_hair">
+                            <option value="no">No</option>
+                            <option value="yes">Sí</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group" id="guestTwo">
+                    <p class='en'>Guest 2</p>
+                    <p class='es'>Invitado 2</p>
+                    <div class="form-group-two-col">
+                        <label for="firstName"> <span class="en">First Name</span><span class="es">Nombre</span></label>
+                        <input type="text" id="2_first" name="2_first">
+                        <label for="latsName"><span class="en">Last Name</span><span class="es">Apellido</span></label>
+                        <input type="text" id="2_last" name="2_last">
+                        <label><span class="en">Meal Preference</span><span class="es">Preferencia de Comida</span></label>
+                        <select class="dropdown en" name="2_meal">
+                            <option value="meat">Carnivore (pork, chicken, & fish)</option>
+                            <option value="veg">Vegetarian</option>
+                        </select>
+                        <select class="dropdown es" name="2_meal">
+                            <option value="meat">Carnívora (cerdo, pollo y pescado)</option>
+                            <option value="veg">Vegetariana</option>
+                        </select>
+                        <label><span class="en">Hair & Makeup </span><span class="es">Peinado y Maquillaje</span></label>
+                        <select class="dropdown en" name="2_hair">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                        <select class="dropdown es" name="2_hair">
+                            <option value="no">No</option>
+                            <option value="yes">Sí</option>
                         </select>
                     </div>
                 </div>
                 
-                <div class="form-group hidden" id="guestTwo">
-                    <p>Guest 2</p>
+                <!-- <div class="form-group hidden" id="guestTwo">
+                    <p class='en'>Guest 2</p>
+                    <p class='es'>Invitado 2</p>
                     <div class="form-group-two-col">
                         <label for="firstName"> First Name</label>
                         <input type="text" id="2_first" name="2_first">
@@ -252,10 +293,51 @@
                             <option value="yes">Yes</option>
                         </select>
                     </div>
-                </div>
+                </div> -->
                 
-                <div class="form-group hidden" id="guestThree">
-                    <p>Guest 3 (child)</p>
+                <div class="form-group" id="guestThree">
+                    <p class='en'>Guest 3 (child)</p>
+                    <p class='es'>Invitado 3 (niño)</p>
+                    <div class="form-group-two-col">
+                        <label for="firstName"> <span class="en">First Name</span><span class="es">Nombre</span></label>
+                        <input type="text" id="3_first" name="3_first">
+                        <label for="latsName"><span class="en">Last Name</span><span class="es">Apellido</span></label>
+                        <input type="text" id="3_last" name="3_last">
+                        <label><span class="en">Meal Preference</span><span class="es">Preferencia de Comida</span></label>
+                        <select class="dropdown en" name="3_meal">
+                            <option value="meat">Carnivore (pork, chicken, & fish)</option>
+                            <option value="veg">Vegetarian</option>
+                        </select>
+                        <select class="dropdown es" name="3_meal">
+                            <option value="meat">Carnívora (cerdo, pollo y pescado)</option>
+                            <option value="veg">Vegetariana</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group" id="guestFour">
+                    <p class='en'>Guest 4 (child)</p>
+                    <p class='es'>Invitado 4 (niño)</p>
+                    <div class="form-group-two-col">
+                        <label for="firstName"> <span class="en">First Name</span><span class="es">Nombre</span></label>
+                        <input type="text" id="4_first" name="4_first">
+                        <label for="latsName"><span class="en">Last Name</span><span class="es">Apellido</span></label>
+                        <input type="text" id="4_last" name="4_last">
+                        <label><span class="en">Meal Preference</span><span class="es">Preferencia de Comida</span></label>
+                        <select class="dropdown en" name="4_meal">
+                            <option value="meat">Carnivore (pork, chicken, & fish)</option>
+                            <option value="veg">Vegetarian</option>
+                        </select>
+                        <select class="dropdown es" name="4_meal">
+                            <option value="meat">Carnívora (cerdo, pollo y pescado)</option>
+                            <option value="veg">Vegetariana</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- <div class="form-group hidden" id="guestThree">
+                    <p class='en'>Guest 3 (child)</p>
+                    <p class='es'>Invitado 3 (niño)</p>
                     <div class="form-group-two-col">
                         <label for="firstName"> First Name</label>
                         <input type="text" id="3_first" name="3_first">
@@ -267,10 +349,11 @@
                             <option value="veg">Vegetarian</option>
                         </select>
                     </div>
-                </div>
+                </div> -->
                 
-                <div class="form-group hidden" id="guestFour">
-                    <p>Guest 4 (child)</p>
+                <!-- <div class="form-group hidden" id="guestFour">
+                    <p class='en'>Guest 4 (child)</p>
+                    <p class='es'>Invitado 4 (niño)</p>
                     <div class="form-group-two-col">
                         <label for="firstName"> First Name</label>
                         <input type="text" id="4_first" name="4_first">
@@ -282,26 +365,26 @@
                             <option value="veg">Vegetarian</option>
                         </select>
                     </div>
-                </div>
+                </div> -->
                 <hr>
                 <div class="form-group">
-                    <p>Anticipated Travel Dates</p>
+                    <p><span class="en">Anticipated Travel Dates</span><span class="es">Fechas Anticipadas de Viaje</span></p>
                     <div class="form-group-two-col">
-                        <label for="date-object">Arrival Date</label>
+                        <label for="date-object"><span class="en">Arrival Date</span> <span class="es">Fecha de Llegada</span></label>
                         <input type="date" name="arrivalDate" id="arrivalDate" />
                     </div>
                     <div class="form-group-two-col">
-                        <label for="date-object">Departure Date</label>
+                        <label for="date-object"><span class="en">Departure Date</span><span class="es">Fecha de Salida</span></label>
                         <input type="date" name="departureDate" id="departureDate" />
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Notes</label>
+                    <label for="message"><span class="en">Notes</span><span class="es">Notas</span></label>
                     <textarea name="notes" id="message" cols="30" rows="5"></textarea>
                 </div>
         
-                <button type="submit">Submit</button>
+                <button type="submit"><span class="en">Submit</span><span class="es">Enviar</span></button>
             </form>
             </div>
             <div id="status"></div>
