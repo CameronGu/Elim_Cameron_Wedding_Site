@@ -1,4 +1,9 @@
-import {formToSheets} from './formManager.js';
+import {formToSheets, showGuestFields} from './formManager.js';
+
+export const showHideDivs = (showArr,hideArr) => {
+    showArr ? showArr.forEach(x => x.classList.remove('hidden')) : '';
+    hideArr ? hideArr.forEach(x => x.classList.add('hidden')) : '';
+}
 
 const navSlide = () => {
     const burger = document.querySelector('.burger');
@@ -31,12 +36,17 @@ const langSwitch = () => {
     const spanishLangOptions = ["es", "es-AR", "es-GT", "es-CR", "es-PA", "es-DO", "es-MX", "es-VE", "es-CO", 
     "es-PE", "es-EC", "es-CL", "es-UY", "es-PY", "es-BO", "es-SV", "es-HN", "es-NI", 
     "es-PR"];
+    let show,hide;
 
     if (spanishLangOptions.includes(userLang)) {
-        textEN.forEach(x => x.classList.toggle('hidden'));
+        show = textES;
+        hide = textEN;
     } else {
-        textES.forEach(x => x.classList.toggle('hidden'));
+        show = textEN;
+        hide = textES;
     }
+
+    showHideDivs(show,hide);
 
     langButton.addEventListener('click',() => {
         textES.forEach(x => x.classList.toggle('hidden'));
@@ -46,43 +56,12 @@ const langSwitch = () => {
     
 }
 
-const hideExtraGuestsFromForm = () => {
-    const guestPicker = document.getElementById('numGuests');
-    const guestOne = document.getElementById('guestOne');
-    const guestTwo = document.getElementById('guestTwo');
-    const guestThree = document.getElementById('guestThree');
-    const guestFour = document.getElementById('guestFour');
-
-    guestPicker.addEventListener('change',() => {
-        const numGuests = guestPicker.options[guestPicker.selectedIndex].value;
-        switch (numGuests) {
-            case '1': 
-                guestOne.classList.remove('hidden');
-                [guestTwo,guestThree,guestFour].forEach(x => x.classList.add('hidden'));
-                break;
-            case '2':
-                [guestOne,guestTwo].forEach(x => x.classList.remove('hidden'));
-                [guestThree,guestFour].forEach(x => x.classList.add('hidden'));
-                break;
-            case '3':
-                [guestOne,guestTwo,guestThree].forEach(x => x.classList.remove('hidden'));
-                guestFour.classList.add('hidden');
-                break;
-            case '4':
-                [guestOne,guestTwo,guestThree,guestFour].forEach(x => x.classList.remove('hidden'));
-                break;
-            default:
-                console.log('switch case error');
-        }
-    })
-}
-
 
 const app = () => {
     navSlide();
     langSwitch();
     formToSheets();
-    hideExtraGuestsFromForm();
+    showGuestFields();
 }
 
 app();
