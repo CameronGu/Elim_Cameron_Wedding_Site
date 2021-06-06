@@ -1,4 +1,5 @@
 import {formToSheets, showGuestFields} from './formManager.js';
+import {modal} from './modal.js'
 
 export const showHideDivs = (showArr,hideArr) => {
     showArr ? showArr.forEach(x => x.classList.remove('hidden')) : '';
@@ -62,6 +63,7 @@ const app = () => {
     langSwitch();
     formToSheets();
     showGuestFields();
+    modal();
 }
 
 app();

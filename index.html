@@ -239,6 +239,19 @@
                             <option value="no">No</option>
                             <option value="yes">Sí</option>
                         </select>
+                        <!-- Trigger/Open The Modal -->
+                        <button id="myBtn" type="button">Open Modal</button>
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Some text in the Modal..</p>
+                        </div>
+
+                        </div>
                     </div>
                 </div>
 
@@ -328,7 +341,7 @@
                     <textarea name="notes" id="message" cols="30" rows="5"></textarea>
                 </div>
         
-                <button type="submit"><span class="en">Submit</span><span class="es">Enviar</span></button>
+                <button type="submit" id='send-to-sheets'><span class="en">Submit</span><span class="es">Enviar</span></button>
             </form>
             </div>
             <div id="status"></div>
