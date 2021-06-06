@@ -116,6 +116,14 @@ h3 {
     background-image: url('./img/darren-lawrence-K4BsLPTjKJA-unsplash.jpg');
 }
 
+#rsvp {
+  background-image: url('./img/floral_invitation_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
 /* Sections */
 .section {
     text-align: center;
@@ -353,6 +361,21 @@ h4 {
     display: none;
   }
 
+
+/* Colors */
+    /* orange:  #e8941a */
+    /* pink:  #f78b98 */
+    /* fuschia:  #dc4182 */
+    /* blue:  #6757b7 */
+    /* green:  #7fbaa6 */
+    /* whiteish:  #eaebee */
+    /* cream: #e7e6d4 */
+    /* brown-gray: #cabdb1 */
+    /* charcoal: #3f4439 */
+
+
+
+
 /* RSVP form */
 .contact-form {
     width: 90%;
@@ -360,7 +383,7 @@ h4 {
     margin: 0 auto;
     padding: 20px;
     box-shadow: 0px 0px 20px #00000010;
-    background-color: #eaebee;
+    background-color: #7fbaa6;
     border-radius: 8px;
     margin-bottom: 20px;
     color: #3f4439;
@@ -373,6 +396,7 @@ h4 {
   }
   .form-group input,
   .form-group textarea {
+    Font-Family: 'Monda', Sans-Serif;
     width: 100%;
     padding: 5px;
     font-size: 16px;
@@ -407,15 +431,18 @@ h4 {
     padding: 20px;
     font-size: 24px;
     border-radius: 8px;
-    color: #e7e6d4;
+    color: #3f4439;
     text-align: center;
     cursor: pointer;
     margin-top: 10px;
-    background-color:#3f4439;
+    background-color:#f78b98;
     transition: 0.3s ease background-color;
+    transition: transform 0.3s ease;
   }
   .contact-form button[type="submit"]:hover {
     background-color: #f78b98;
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
   }
   #status {
     width: 90%;
@@ -465,13 +492,15 @@ h4 {
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
-  background-color:#7fbaa6;
-  transition: 0.3s ease background-color;
+  /* background-color:#7fbaa6; */
+  /* transition: 0.3s ease background-color; */
+  transition: transform 0.3s ease
 }
 
 .modalBtn:hover {
-  background-color:#f78b98;
-  transition: 0.3s ease background-color;
+  /* background-color:#f78b98; */
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
 }
 
 .modal {
@@ -494,6 +523,27 @@ h4 {
   padding: 20px;
   border: 1px solid #888;
   width: 50%; /* Could be more or less, depending on screen size */
+  animation: popup 0.5s ease;
+}
+
+.modal-content img {
+  max-width: 75%;
+}
+
+/* .overlay:target .popup{
+  
+} */
+
+@keyframes popup {
+  0%{
+    transform: scale(.5);
+  }
+  70%{
+    transform: scale(1.05);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 
 /* The Close Button */
@@ -528,6 +578,10 @@ h4 {
       .contact-form button[type="submit"] {
         font-size: 20px;
       }
+
+    .modal-content {
+      width: 85%;
+    }
 
     .hero {
         height: 400px;
