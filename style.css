@@ -43,6 +43,15 @@ h3 {
     line-height: 1em;
 }
 
+.itin {
+  display: flex;
+  justify-content: center;
+}
+
+.itin > ul, .itin > ul > ul {
+  text-align: left;
+  list-style-type: disc;
+}
 
 /* Body Images */
 .reveal-image, .foreground-image, .big-logo {
@@ -59,9 +68,10 @@ h3 {
 }
 
 .hero {
-    background-image: url('./img/elim-cam-beach-fire.jpg');
-    min-height: 100%;
-}
+    background-image: url('./img/E_C-photo-mood-board_more_squared.webp');
+    min-height: 70%;
+    opacity: 0.8;
+  }
 
 .big-logo {
     opacity: 1;
@@ -89,7 +99,7 @@ h3 {
 
 /* reveal images for each section */
 #story {
-    background-image: url('./img/nathan-dumlao-5BB_atDT4oA-unsplash.jpg');
+    background-image: url('./img/nick-karvounis-UA3zSV9ze8U-unsplash.jpg');
 }
 
 #location {
@@ -104,7 +114,7 @@ h3 {
     background-image: url('./img/chuttersnap-aEnH4hJ_Mrs-unsplash.jpg');
 }
 
-#schedule {
+#itinerary {
     background-image: url('./img/nathan-dumlao-5BB_atDT4oA-unsplash.jpg');
 }
 
@@ -113,7 +123,8 @@ h3 {
 }
 
 #contact {
-    background-image: url('./img/darren-lawrence-K4BsLPTjKJA-unsplash.jpg');
+    background-image: url('./img/nathan-dumlao-5BB_atDT4oA-unsplash.jpg');
+    /* background-image: url('./img/darren-lawrence-K4BsLPTjKJA-unsplash.jpg'); */
 }
 
 #rsvp {
@@ -147,7 +158,7 @@ h3 {
 }
 
 .reveal-text {
-    width: 40%;
+    width: 60%;
     max-width: 700px;
     text-align: center;
     color: #3f4439;
@@ -612,8 +623,7 @@ h4 {
     }
 
     .hero {
-        background-image: url('./img/elim-cam-beach-fire.jpg');
-        min-height: 55%;
+      min-height: 50%;
     }
 
     .big-logo {
