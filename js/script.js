@@ -29,7 +29,9 @@ const navSlide = () => {
 }
 
 
-function scrollShowNav() {
+
+
+const scrollShowInfo = () => {
    if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) {
       document.getElementById("new").style.top = "-50px";
    } else {
@@ -37,6 +39,10 @@ function scrollShowNav() {
    }
 }
 
+const hideInfoBar = () => {
+    window.onscroll = scrollShowInfo;
+    window.ontouchmove = scrollShowInfo;
+}
 
 const langSwitch = () => {
     const langButton = document.querySelector('.tgl-btn');
@@ -73,7 +79,7 @@ const app = () => {
     formToSheets();
     showGuestFields();
     modal();
-    window.onscroll = scrollShowNav;
+    hideInfoBar();
 }
 
 app();
