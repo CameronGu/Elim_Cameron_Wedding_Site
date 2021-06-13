@@ -29,6 +29,15 @@ const navSlide = () => {
 }
 
 
+function scrollShowNav() {
+   if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) {
+      document.getElementById("new").style.top = "-50px";
+   } else {
+      document.getElementById("new").style.top = "8vh";
+   }
+}
+
+
 const langSwitch = () => {
     const langButton = document.querySelector('.tgl-btn');
     const textES = document.querySelectorAll('.es');
@@ -64,6 +73,7 @@ const app = () => {
     formToSheets();
     showGuestFields();
     modal();
+    window.onscroll = scrollShowNav;
 }
 
 app();

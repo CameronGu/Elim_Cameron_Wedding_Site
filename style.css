@@ -87,6 +87,8 @@ h3 {
   min-height: 3%;
   background-color: #6757b7;
   color: #e8941a;
+  transition: top 0.3s;
+  z-index: 1;
 }
 
 .hero {
