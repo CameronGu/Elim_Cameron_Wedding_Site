@@ -26,6 +26,10 @@ main, body, html {
     color: #cabdb1;
 }
 
+img {
+  max-width: 90%;
+}
+
 h1 {
     Font-Family: 'Julius Sans One', Sans-Serif;
     Font-Size: 3em;
@@ -65,6 +69,24 @@ h3 {
     align-items:center;
     justify-content: center;
     min-height: 400px;
+}
+
+#new {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.55em;
+  height: 1vh;
+  padding: 0;
+  margin: 0;
+  top: 8vh;
+  background-color: #dc4182;
+  width: 100%;
+  z-index:100;
+  min-height: 3%;
+  background-color: #6757b7;
+  color: #e8941a;
 }
 
 .hero {
@@ -580,6 +602,15 @@ h4 {
         overflow-x: hidden;
     }
 
+    h2 {
+      font-size: 2.5em;
+    }
+
+    h3 {
+      font-size: 1.25em;
+      word-wrap: break-word;
+    }
+
     .form-group {
         font-size: 16px;
       }
@@ -597,7 +628,7 @@ h4 {
     }
 
     .hero {
-        height: 400px;
+      min-height: 50%;
     }
 
     .reveal-image {
@@ -620,10 +651,6 @@ h4 {
 
     .foreground-image {
         visibility: hidden;
-    }
-
-    .hero {
-      min-height: 50%;
     }
 
     .big-logo {
