@@ -39,6 +39,7 @@ h1 {
 h2 {
     Font-Family: 'Julius Sans One', Sans-Serif;
     Font-Size: 3em;
+    line-height: 1em;
 }
 
 h3 {
@@ -47,14 +48,51 @@ h3 {
     line-height: 1em;
 }
 
+h4 {
+  Font-Family: 'Julius Sans One', Sans-Serif;
+  Font-Size: 1.5em;
+  line-height: 1m;  
+  font-weight: 500;
+}
+
 .itin {
   display: flex;
   justify-content: center;
 }
 
-.itin > ul, .itin > ul > ul {
-  text-align: left;
+ul {
+
+}
+
+.bulleted_list {
+  display: inline-block; 
   list-style-type: disc;
+  text-align: left;
+}
+
+.centered_list {
+  text-align: center;
+}
+
+.two_col_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-items: center;
+  align-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: auto;
+}
+
+.col_1_flex , .col_2_flex {
+  min-width: 450px;
+  flex: 1;
+}
+
+.text_justify {
+  text-align: justify;
 }
 
 /* Body Images */
@@ -134,12 +172,16 @@ h3 {
     background-image: url('./img/eduardo-loaiza-y1UR7AcBe5o-unsplash.jpg');
 }
 
+#attire {
+  background-image: url('./img/wedding_flowers.jpg');
+}
+
 #lodging {
     background-image: url('./img/chuttersnap-aEnH4hJ_Mrs-unsplash.jpg');
 }
 
 #itinerary {
-    background-image: url('./img/nathan-dumlao-5BB_atDT4oA-unsplash.jpg');
+    background-image: url('./img/nick-karvounis-UA3zSV9ze8U-unsplash.jpg');
 }
 
 #recommendations {
@@ -148,7 +190,6 @@ h3 {
 
 #contact {
     background-image: url('./img/nathan-dumlao-5BB_atDT4oA-unsplash.jpg');
-    /* background-image: url('./img/darren-lawrence-K4BsLPTjKJA-unsplash.jpg'); */
 }
 
 #rsvp {
@@ -167,7 +208,7 @@ h3 {
 
 .section p {
     width: 75%;
-    margin: auto;
+    margin: 2em auto;
     max-width: 900px;
 }
 
@@ -291,13 +332,70 @@ nav {
 }
 
 
+/* flower color grid  */
+.flower {
+  width: 4em;
+}
+
+#flower_grid {
+  display: grid;
+  grid-template-columns: repeat(5,4em);
+  /* grid-template-rows: repeat(5,4em); */
+  gap: 0.25em;
+  align-items: center;
+  justify-content: center;
+}
+
+.row1_col3 {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.row2_col2 {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.row2_col4 {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+.row3_col1 {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+.row3_span25 {
+  grid-row: 3;
+  grid-column: 2 / span 3;
+  width: 100%
+}
+
+
+.row3_col5 {
+  grid-row: 3;
+  grid-column: 5;
+}
+
+.row4_col2 {
+  grid-row: 4;
+  grid-column: 2;
+}
+
+.row4_col4 {
+  grid-row: 4;
+  grid-column: 4;
+}
+
+.row5_col3 {
+  grid-row: 5;
+  grid-column: 3;
+}
+
 /* Language Switch */
 .tg-list-item {
     margin: 0 2em;
-}
-
-h4 {
-    color: #999;
 }
 
 .tgl {
@@ -689,6 +787,10 @@ h4 {
 
     .nav-links li {
         opacity: 0;
+    }
+
+    .col_1_flex , .col_2_flex {
+      max-width: 85%;
     }
 
 }
