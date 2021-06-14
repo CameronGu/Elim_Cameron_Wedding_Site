@@ -742,8 +742,9 @@ nav {
     .section {
         padding: 2em 2em;
     }
+    
     .section p {
-        width: 85%;
+        max-width: 75%;
     }
 
     .foreground-image {
@@ -786,7 +787,7 @@ nav {
         opacity: 0;
     }
 
-    .col_1_flex , .col_2_flex {
+    .two_col_flex {
       max-width: 85%;
     }
 
